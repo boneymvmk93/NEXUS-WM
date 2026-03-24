@@ -1,0 +1,205 @@
+{
+  "name": "Investment",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name/label of the investment"
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": [
+        "fd",
+        "cash",
+        "equity",
+        "mutual_fund",
+        "bond",
+        "ulip",
+        "commodity",
+        "crypto"
+      ],
+      "description": "Type of asset"
+    },
+    "market": {
+      "type": "string",
+      "enum": [
+        "india",
+        "us",
+        "uae"
+      ],
+      "description": "Market/country"
+    },
+    "sub_type": {
+      "type": "string",
+      "description": "Sub-type"
+    },
+    "invested_amount": {
+      "type": "number",
+      "description": "Principal / total invested in original currency"
+    },
+    "current_value": {
+      "type": "number",
+      "description": "Current value in original currency"
+    },
+    "original_currency": {
+      "type": "string",
+      "enum": [
+        "INR",
+        "USD",
+        "AED"
+      ]
+    },
+    "units": {
+      "type": "number",
+      "description": "Number of units/shares"
+    },
+    "purchase_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Purchase / start date"
+    },
+    "maturity_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Maturity / end date"
+    },
+    "interest_rate": {
+      "type": "number",
+      "description": "Interest/coupon rate %"
+    },
+    "institution": {
+      "type": "string",
+      "description": "Bank, broker, or platform"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "deposit_id": {
+      "type": "string",
+      "description": "FD: deposit identifier"
+    },
+    "deposit_name": {
+      "type": "string",
+      "description": "FD: deposit label"
+    },
+    "fd_investment_type": {
+      "type": "string",
+      "enum": [
+        "NRI",
+        "Resident"
+      ]
+    },
+    "fd_interest_type": {
+      "type": "string",
+      "enum": [
+        "Reinvestment",
+        "Interest Payout"
+      ]
+    },
+    "fd_compounding_period": {
+      "type": "string",
+      "enum": [
+        "Monthly",
+        "Quarterly",
+        "Half Yearly",
+        "Yearly"
+      ]
+    },
+    "bond_isin": {
+      "type": "string"
+    },
+    "bond_price_per_unit": {
+      "type": "number"
+    },
+    "bond_accrued": {
+      "type": "number"
+    },
+    "bond_first_payout_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "bond_payout_type": {
+      "type": "string",
+      "enum": [
+        "Monthly",
+        "Quarterly",
+        "Half Yearly",
+        "Yearly"
+      ]
+    },
+    "bond_interest_type": {
+      "type": "string",
+      "enum": [
+        "Fixed",
+        "Floating",
+        "Zero Coupon"
+      ]
+    },
+    "bond_trade_value": {
+      "type": "number"
+    },
+    "bond_total_value": {
+      "type": "number"
+    },
+    "bond_maturity_amount": {
+      "type": "number"
+    },
+    "transaction_type": {
+      "type": "string",
+      "enum": [
+        "Buy",
+        "Sell",
+        "SIP"
+      ]
+    },
+    "transaction_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Market asset: units purchased"
+    },
+    "buy_price": {
+      "type": "number",
+      "description": "Market asset: price at purchase"
+    },
+    "current_price": {
+      "type": "number",
+      "description": "Market asset: latest price"
+    },
+    "ticker_symbol": {
+      "type": "string",
+      "description": "Market asset: ticker / fund code"
+    },
+    "gold_karat": {
+      "type": "string",
+      "enum": [
+        "22K",
+        "24K"
+      ]
+    },
+    "commodity_purchase_type": {
+      "type": "string",
+      "enum": [
+        "Physical",
+        "SGB",
+        "ETF"
+      ]
+    },
+    "commodity_unit": {
+      "type": "string"
+    },
+    "price_per_unit": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "asset_type",
+    "market",
+    "invested_amount",
+    "current_value",
+    "original_currency"
+  ]
+}
